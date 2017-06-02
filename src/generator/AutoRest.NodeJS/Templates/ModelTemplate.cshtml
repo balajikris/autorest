@@ -15,9 +15,6 @@
 @EmptyLine
 }
 /**
- * @@class
- * Initializes a new instance of the @(Model.Name) class.
- * @@constructor
 @if (!String.IsNullOrEmpty(Model.Summary))
 {
   @WrapComment(" * ", "@summary " + Model.Summary)@:
@@ -28,6 +25,7 @@
   @WrapComment(" * ", Model.Documentation)@:
 @: *
 }
+* @@constructor
 @foreach (var property in Model.DocumentationPropertyList)
 {
     @CompositeTypeJs.ConstructPropertyDocumentation(
